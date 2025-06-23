@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludores</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+        AOS.init();
+    </script>
+  </head>
+  <body>
+    <div class="loading"></div>
+    <nav>
+      <div class="logo">Ludores</div>
+      <div class="button" onclick="show_nav_ul()">show</div>
+      <ul>
+        <li>Accueil</li>
+        <li>A propos</li>
+        <li>Portfolio</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <section class="section-1">
+      <div class="photo-profil"></div>
+    </section>
+
+    <section class="section-2">
+      <div class="name">BEJERY Ludorès</div>
+      <div class="work">Ingénieur - Développeur FullStack Typescript</div>
+      <div class="description">
+        <p>
+          Développeur informatique passionné, cela fait maintenant 6 ans que je me suis pleinement investi dans cet univers.
+          Au fil des années, j’ai eu l’opportunité de mener plusieurs projets de A à Z, en assurant aussi bien la conception côté backend que le développement frontend.
+          Cette double compétence me permet de comprendre l’ensemble du cycle de vie d’une application et de proposer des solutions cohérentes, performantes et orientées utilisateur.
+        </p>
+        <p class="description-secondary">
+          Fort de plusieurs années d’expérience en développement web, j’ai su consolider mes compétences à
+           travers des projets concrets et une formation académique solide. Je maîtrise la conception d’interfaces modernes, la création
+            d’API performantes, ainsi que la gestion de bases de données et de déploiement serveur. Mon parcours universitaire 
+            m’a permis d’allier technique et stratégie : j’ai obtenu ma Licence en génie logiciel et base de données en novembre 
+            2023, avant de décrocher mon Master en génie logiel et base de données aussi en 2025 à l'Ecole Nationale d'Informatique
+             à l’Université de Fianarantsoa. Ces formations m’ont permis de développer une approche structurée, 
+            orientée utilisateur et rigoureuse dans chaque projet que je mène.
+        </p>
+        <p class="description-secondary">
+          Je propose des services de développement web sur mesure, allant de la création de sites vitrines modernes à 
+          la conception d’applications web complètes. J’interviens aussi bien sur la partie frontend que backend, avec les
+          téchnologies web modernes. Mes prestations incluent l’intégration responsive, le développement d’API sécurisées, 
+          la gestion de bases de données, ainsi que le déploiement et la mise en ligne de vos projets (Docker, Nginx, PM2).
+           Je suis également disponible pour des missions de maintenance, d’optimisation des 
+          performances ou de refonte technique.
+        </p>
+      </div>
+      <div class="plus" onclick="showMoreDescription()">Voir Plus</div>
+    </section>
+
+    <section class="section-3">
+      <div class="content">
+        <div class="text">"Coder n’est pas seulement un travail : 
+          c’est une passion, une distraction, un anti-stress et, pour moi,
+           bien plus encore — c’est un univers où je me sens vivant."</div>
+        <img src="./assets/pic3.jpg" alt="" srcset="" />
+      </div>
+      <div class="content">
+        <img src="./assets/pic2.jpg" alt="" srcset="" />
+      </div>
+    </section>
+    <section class="section-4">
+      <div class="frame"></div>
+    </section>
+    <section class="section-5">
+      <div class="service-text">
+        <div>Je</div>
+        <div>propose</div>
+        <div>solutions</div>
+      </div>
+      <div class="service-label">
+        En tant que développeur informatique, je propose des solutions concrètes et adaptées à vos besoins, en apportant des réponses techniques aux problématiques nécessitant une intervention digitale. Qu’il s’agisse de créer une application, d’automatiser un processus, de concevoir une interface ou de développer une API, je mets mes compétences au service de vos projets pour transformer vos idées en solutions fonctionnelles, performantes et durables.
+      </div>
+    </section>
+    <section class="section-6">
+      <div>
+        Voici quelques projets que j’ai eu l’opportunité de réaliser ces
+        derniers temps
+      </div>
+      <svg data-aos="fade-down"
+        fill="#000000"
+        width="300px"
+        height="300px"
+        viewBox="0 0 24 24"
+        id="down-double-arrow"
+        data-name="Flat Line"
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon flat-line"
+      >
+        <polyline
+          id="primary"
+          points="4 17 7 20 10 17"
+          style="
+            fill: none;
+            stroke: rgb(0, 0, 0);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2;
+          "
+        ></polyline>
+        <path
+          id="primary-2"
+          data-name="primary"
+          d="M7,4V20M17,4V20"
+          style="
+            fill: none;
+            stroke: rgb(0, 0, 0);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2;
+          "
+        ></path>
+        <polyline
+          id="primary-3"
+          data-name="primary"
+          points="14 17 17 20 20 17"
+          style="
+            fill: none;
+            stroke: rgb(0, 0, 0);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2;
+          "
+        ></polyline>
+      </svg>
+      <div>Mon portfolio</div>
+    </section>
+    <section class="section-7">
+      <div>
+        <!--1-->
+        <div>
+          <!--11-->
+          <div>
+            <!--111-->
+            <div>
+              <!--1111-->
+              <span>Gestion de stock</span
+              ><!--11111-->
+              <span>Desketop</span
+              ><!--11112-->
+            </div>
+            <div>
+              <!--1112-->
+              <div>VueJs</div>
+              <div>Express</div>
+              <div>Electron</div>
+            </div>
+          </div>
+          <div>
+            <!--112-->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sint
+            laborum nesciunt nostrum, eos ducimus iste voluptatibus deleniti
+            quasi. Ipsa est animi quaerat molestias? Nam, similique maxime!
+            Fugit eius, cupiditate facere quos accusamus voluptatum quo harum id
+            modi! Cumque maxime, dolores, quis omnis magnam nobis.
+          </div>
+          <div>
+            <!--113-->
+            <div>Voir le projet</div>
+            <!--1131-->
+            <div>
+              <!--1132-->
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 20 20"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <!--11321-->
+                <title>github [#142]</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-140.000000, -7559.000000)"
+                    fill="#000000"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                        id="github-[#142]"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <div>gitHub</div>
+              <!--11322-->
+            </div>
+          </div>
+        </div>
+        <div>
+          <!--12-->
+          <img src="./assets/gst.jpg" alt="" /><!--121-->
+        </div>
+      </div>
+    </section>
+    <section class="section-8">
+      <!-- technologies -->
+    </section>
+    <section class="section-9">
+      <div>
+        <div>Contacter moi</div>
+        <div>Parlons de vos besoins</div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
+          <div>Numbero téléphone</div>
+          <div>+261 32 14 225 92</div>
+        </div>
+        <div>
+          <div>
+            <svg
+              width="32px"
+              height="32px"
+              viewBox="0 -3.5 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+            >
+              <title>mail</title>
+              <desc>Created with Sketch Beta.</desc>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+                sketch:type="MSPage"
+              >
+                <g
+                  id="Icon-Set-Filled"
+                  sketch:type="MSLayerGroup"
+                  transform="translate(-414.000000, -261.000000)"
+                  fill="#fff"
+                >
+                  <path
+                    d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z"
+                    id="mail"
+                    sketch:type="MSShapeGroup"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div>Mail</div>
+          <div>bejeryludores@gmail.com</div>
+        </div>
+        <div>
+          <div>
+            <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.982 19.61c.454-.7.909-1.6 1.236-2.755.755.29 1.273.636 1.591.909a8.182 8.182 0 0 1-2.864 1.845h.037v.001zm-8.8-1.855c.336-.273.845-.61 1.6-.91.336 1.164.773 2.064 1.236 2.764A8.2 8.2 0 0 1 6.2 17.755h-.018zm10.636-6.664c-.028-.81-.11-1.619-.245-2.418 1-.364 1.727-.8 2.236-1.2a8.136 8.136 0 0 1 1.282 3.618h-3.273zm-8.973-4.2a5.936 5.936 0 0 1-1.481-.8 8.2 8.2 0 0 1 2.654-1.7c-.427.636-.845 1.454-1.182 2.5h.01-.001zm7.137-2.5a8.145 8.145 0 0 1 2.654 1.7 6.01 6.01 0 0 1-1.481.8 9.58 9.58 0 0 0-1.182-2.5h.009zM14.8 9.118c.09.6.182 1.246.2 1.973H9c.027-.727.09-1.382.182-1.973 1.855.334 3.754.334 5.609 0h.009zM12 7.545c-.91 0-1.71-.072-2.39-.181.726-2.237 1.854-3.137 2.39-3.455.518.318 1.655 1.227 2.382 3.455A15.04 15.04 0 0 1 12 7.545zm-6.818-.072a8.03 8.03 0 0 0 2.245 1.2 18.368 18.368 0 0 0-.245 2.418h-3.31a8.13 8.13 0 0 1 1.319-3.618h-.01.001zm-1.3 5.436h3.3c.036.782.09 1.5.2 2.155a7.682 7.682 0 0 0-2.31 1.272 8.11 8.11 0 0 1-1.2-3.427h.01zM12 14.364c-1.09 0-2.027.09-2.845.236A16.91 16.91 0 0 1 9 12.91h6c-.027.608-.073 1.18-.145 1.69A15.388 15.388 0 0 0 12 14.355v.009zm0 5.727c-.545-.327-1.745-1.3-2.473-3.727A14.095 14.095 0 0 1 12 16.182c.955 0 1.773.063 2.482.182-.727 2.454-1.927 3.4-2.473 3.727H12zm6.927-3.764a7.634 7.634 0 0 0-2.309-1.272 17.95 17.95 0 0 0 .2-2.146h3.31a8.11 8.11 0 0 1-1.2 3.418h-.001zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="#fff"/>
+            </svg>
+          </div>
+          <div>Site Web</div>
+          <div>ludores.bejery.com</div>
+        </div>
+      </div>
+    </section>
+    <section class="section-10">
+      <div></div>
+      <div>
+        <input type="text" placeholder="Votre nom">
+        <input type="text" placeholder="Votre mail">
+        <input type="text" placeholder="Objet de votre message">
+        <textarea rows="7" name="" id="" placeholder="Message en question"></textarea>
+        <input type="button" value="Envoyer">
+      </div>
+    </section>
+
+    <section class="section-11">
+      <div>Restons connecter, suivez moi dans mes reseaux sosiaux</div>
+      <div>
+        <a href="">
+          <svg fill="#fff" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"/>
+          </svg>
+        </a>
+        <a href="">
+          <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#fff"/>
+            <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#fff"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#fff"/>
+          </svg>
+        </a>
+        <a href="">
+          <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#fff"/>
+            <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#fff"/>
+            <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#fff"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#fff"/>
+          </svg>
+        </a>
+        <div></div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <div>
+          <div>HeadLine</div>
+          <div>Text Value</div>
+        </div>
+        <div>
+          <div>HeadLine</div>
+          <div>Text Value</div>
+        </div>
+        <div>
+          <div>HeadLine</div>
+          <div>Text Value</div>
+        </div>
+      </div>
+      <div>Text Foot</div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
