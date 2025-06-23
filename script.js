@@ -6,7 +6,7 @@ AOS.init();
 
 const portfolio = [
   {
-    title: "Mon portfolio",
+    title: "Mon portfolio ",
     type: "SiteWeb",
     technologies: ["HTML", "Css", "Javascript", "AOS"],
     description:
@@ -17,21 +17,41 @@ const portfolio = [
     imageBorder: true
   },
   {
-    title: "Gestion de stock",
+    title: "STR360 ",
     type: "Desketop",
-    technologies: ["VueJS", "Express", "Electron"],
+    technologies: ["VueJS", "Express", "Electron", "ExpressJs", "IndexedDB"],
     description:
-      "Ce projet consiste en la conception d’une application web complète permettant de gérer plusieurs magasins de manière centralisée. Chaque magasin dispose de son propre espace pour enregistrer les entrées et sorties de produits, suivre les ventes quotidiennes, la gestion des stocks, et les mouvements de caisse. Les utilisateurs (vendeurs, gestionnaires) peuvent enregistrer en temps réel chaque opération effectuée (approvisionnement, vente, retour, perte, etc.). L’espace 'Boss' ou administration centrale permet quant à lui de visualiser et superviser l’ensemble des activités de tous les magasins. Grâce à un tableau de bord intuitif, le responsable peut",
+      "<b>Développement fullStack: </b>Ce projet consiste en la conception d’une application desktop complète permettant de gérer plusieurs magasins de manière centralisée. Chaque magasin dispose de son propre espace pour enregistrer les entrées et sorties de produits, suivre les ventes quotidiennes, la gestion des stocks, et les mouvements de caisse. Les utilisateurs (vendeurs, gestionnaires) peuvent enregistrer en temps réel chaque opération effectuée (approvisionnement, vente, retour, perte, etc.). L’espace 'Boss' ou administration centrale permet quant à lui de visualiser et superviser l’ensemble des activités de tous les magasins. Grâce à un tableau de bord intuitif, le responsable peut",
     link: "https://www.facebook.com",
     git: "https://www.facebook.com",
     image: "./assets/gst.jpg",
   },
   {
-    title: "CashPointer",
-    type: "SiteWeb",
-    technologies: ["NextJS", "Scss", "Tailwind"],
+    title: "CashPointer ",
+    type: "Site Web",
+    technologies: ["NextJS", "Scss", "Tailwind", "NestJs"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sint laborum nesciunt nostrum, eos ducimus iste voluptatibus deleniti quasi. Ipsa est animi quaerat molestias? Nam, similique maxime! Fugit eius, cupiditate facere quos accusamus voluptatum quo harum id modi! Cumque maxime, dolores, quis omnis magnam nobis.",
+      "<b>Développement backOffice: </b>Il s’agit d’un système complet de gestion de cashpoints, permettant de suivre en temps réel toutes les transactions financières effectuées dans plusieurs points de service (dépôts, retraits, transferts, paiements, approvisionnements, etc.). Chaque opération est enregistrée avec précision, incluant le montant, l’agent concerné, le solde avant/après, et la nature de la transaction. Grâce à un espace administrateur dédié, le responsable ou \"boss\" peut visualiser à distance l’ensemble des activités de tous les cashpoints, consulter les soldes disponibles, détecter d’éventuels déséquilibres de caisse, générer des rapports financiers et assurer un contrôle global sur les opérations quotidiennes, assurant ainsi une traçabilité, une sécurité et une vision centralisée de toute l’activité du réseau.",
+    link: "https://www.facebook.com",
+    git: "https://www.facebook.com",
+    image: "./assets/gst.jpg",
+  },
+  {
+    title: "Jeu de bulle ",
+    type: "site Web",
+    technologies: ["HTML", "Css", "Javascript"],
+    description:
+      "Projet personnel développé pour le plaisir, il s’agit d’un jeu de bulles éducatif visant à améliorer la dactylographie. L’utilisateur doit taper les lettres qui apparaissent dans les bulles avant qu’elles ne tombent. Réalisé entièrement en HTML, CSS et JavaScript pur, ce projet m’a permis de renforcer mes bases en développement web tout en explorant des mécaniques simples de jeu et d’interaction.",
+    link: "https://www.facebook.com",
+    git: "https://www.facebook.com",
+    image: "./assets/gst.jpg",
+  },
+  {
+    title: "FS Manager ",
+    type: "Desktop",
+    technologies: ["ReactJS", "Scss", "Electon", "ExpressJs", "IndexedDB"],
+    description:
+      "<b>Développement FrontEnd: </b>Il s’agit d’une application desktop développée pour les responsables clientèle de FiharySoft, destinée à assurer le suivi complet des étudiants tout au long de leur parcours. L’application permet de gérer l’ensemble du processus : depuis l’enregistrement initial de l’étudiant, son assignation à une formation, le suivi de sa progression, jusqu’à l’émission de son certificat en fin de cursus. Cette solution vise à optimiser la gestion administrative et à garantir une traçabilité claire et efficace du parcours de chaque apprenant.",
     link: "https://www.facebook.com",
     git: "https://www.facebook.com",
     image: "./assets/gst.jpg",
@@ -64,6 +84,14 @@ const showMoreDescription = () => {
     element.classList.toggle("show");
   });
 };
+const DomContentLoaded = () => {
+  const loading = document.querySelector(".loading");
+  loading.style.display = "none";
+
+  setPortfolio();
+  AOS.refreshHard()
+
+}
 
 const setPortfolio = () => {
   const section7 = document.querySelector(".section-7");
@@ -89,13 +117,16 @@ const setPortfolio = () => {
     div112.innerHTML = _portfolio.description;
     div1131.innerHTML = "Voir le projet";
     div11322.innerHTML = "gitHub";
+    div11.setAttribute("data-aos", "fade-right")
+    div12.setAttribute("data-aos", "fade-left")
+
     if(_portfolio.imageBorder)div12.style.border = "1px solid black"
     for (const techno of _portfolio.technologies) {
       const div = document.createElement("div");
       div.innerHTML = techno;
       div1112.appendChild(div);
     }
-
+    
     // div1132.appendChild(svgGit)
     div1111.appendChild(div11111)
     div1111.appendChild(div11112)
@@ -117,9 +148,4 @@ const setPortfolio = () => {
 //event Listener
 document.addEventListener("scroll", scrollEvent);
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loading = document.querySelector(".loading");
-  loading.style.display = "none";
-
-  setPortfolio();
-});
+document.addEventListener("DOMContentLoaded", DomContentLoaded);

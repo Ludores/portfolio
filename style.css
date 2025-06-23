@@ -7,6 +7,9 @@ body{
   background-color: #fff;
   overflow-x: hidden;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /******************************************************************************************************************
 *******************************************************************************************************************
@@ -69,6 +72,9 @@ nav>.button{
   padding: 20px 20px;
   background-color: rgba(0, 0, 0, .8);
   backdrop-filter: blur(3px);
+  color: #fff;
+}
+.nav-scroll>ul>li>a{
   color: #fff;
 }
 
@@ -603,7 +609,7 @@ nav>.button{
   display: flex;
   margin-inline: auto;
   width: 80%;
-  padding-bottom: 40px;
+  padding-block: 40px;
 }
 .section-10>div{
   flex: 1;
