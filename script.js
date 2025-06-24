@@ -34,7 +34,7 @@ const portfolio = [
       "<b>Développement backOffice: </b>Il s’agit d’un système complet de gestion de cashpoints, permettant de suivre en temps réel toutes les transactions financières effectuées dans plusieurs points de service (dépôts, retraits, transferts, paiements, approvisionnements, etc.). Chaque opération est enregistrée avec précision, incluant le montant, l’agent concerné, le solde avant/après, et la nature de la transaction. Grâce à un espace administrateur dédié, le responsable ou \"boss\" peut visualiser à distance l’ensemble des activités de tous les cashpoints, consulter les soldes disponibles, détecter d’éventuels déséquilibres de caisse, générer des rapports financiers et assurer un contrôle global sur les opérations quotidiennes, assurant ainsi une traçabilité, une sécurité et une vision centralisée de toute l’activité du réseau.",
     link: "https://www.facebook.com",
     git: "https://www.facebook.com",
-    image: "./assets/gst.jpg",
+    image: "./assets/back-office.png",
   },
   {
     title: "Jeu de bulle ",
@@ -51,10 +51,10 @@ const portfolio = [
     type: "Desktop",
     technologies: ["ReactJS", "Scss", "Electon", "ExpressJs", "IndexedDB"],
     description:
-      "<b>Développement FrontEnd: </b>Il s’agit d’une application desktop développée pour les responsables clientèle de FiharySoft, destinée à assurer le suivi complet des étudiants tout au long de leur parcours. L’application permet de gérer l’ensemble du processus : depuis l’enregistrement initial de l’étudiant, son assignation à une formation, le suivi de sa progression, jusqu’à l’émission de son certificat en fin de cursus. Cette solution vise à optimiser la gestion administrative et à garantir une traçabilité claire et efficace du parcours de chaque apprenant.",
+      "<b>Développement FrontEnd: </b>Il s’agit d’une application desktop développée pour les responsables clientèle de <a href='https://www.facebook.com/fiharysoftformation'>FiharySoft</a>, destinée à assurer le suivi complet des étudiants tout au long de leur parcours. L’application permet de gérer l’ensemble du processus : depuis l’enregistrement initial de l’étudiant, son assignation à une formation, le suivi de sa progression, jusqu’à l’émission de son certificat en fin de cursus. Cette solution vise à optimiser la gestion administrative et à garantir une traçabilité claire et efficace du parcours de chaque apprenant.",
     link: "https://www.facebook.com",
     git: "https://www.facebook.com",
-    image: "./assets/gst.jpg",
+    image: "./assets/fs-manager.jpeg",
   }
 ];
 const technologies = [
