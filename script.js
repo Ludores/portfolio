@@ -57,6 +57,21 @@ const portfolio = [
     image: "./assets/gst.jpg",
   }
 ];
+const technologies = [
+  {url: "./assets/react.svg", name: "ReactJs"},
+  {url: "./assets/vue.svg", name: "VueJs"},
+  {url: "./assets/next.svg", name: "NextJs"},
+  {url: "./assets/nuxt.svg", name: "NuxtJs"},
+  {url: "./assets/react.svg", name: "Native"},
+  {url: "./assets/express.svg", name: "ExpressJs"},
+  {url: "./assets/nest.svg", name: "NestJs"},
+  {url: "./assets/mongo.svg", name: "MongoDB"},
+  {url: "./assets/mysql.svg", name: "MySQL"},
+  {url: "./assets/db.svg", name: "PostgreSQl"},
+  {url: "./assets/git.svg", name: "Git"},
+  {url: "./assets/electron.svg", name: "Electron"},
+  {url: "./assets/indexeddb.svg", name: "IndexedDB"},
+]
 
 const show_nav_ul = () => {
   const nav_ul = document.querySelector("nav>ul");
@@ -89,6 +104,7 @@ const DomContentLoaded = () => {
   loading.style.display = "none";
 
   setPortfolio();
+  setTechnologies()
   AOS.refreshHard()
 
 }
@@ -144,6 +160,25 @@ const setPortfolio = () => {
     section7.appendChild(div1);
   }
 };
+
+const setTechnologies = () => {
+
+  const technoContainer = document.querySelector(".section-8>div:last-child")
+  for(const techno of technologies){
+    const divTechnoItem = document.createElement("div")
+
+    const image = document.createElement("div")
+    image.style.backgroundImage = `url(${techno.url})`  
+    const divName = document.createElement("div")
+    divName.innerHTML = techno.name
+
+    divTechnoItem.appendChild(image)
+    divTechnoItem.appendChild(divName)
+    divTechnoItem.style.zIndex = 3
+
+    technoContainer.appendChild(divTechnoItem)
+  }
+}
 
 //event Listener
 document.addEventListener("scroll", scrollEvent);
