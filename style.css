@@ -1,32 +1,40 @@
-*, body{
+*,
+body,
+html {
   padding: 0;
   margin: 0;
-  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    max-width: 100vw;
+  /* font-family: "Gill Sans", sans-serif; */
 }
-body{
+
+body {
   background-color: #fff;
   overflow-x: hidden;
 }
-html{
+html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+.loading {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
 /******************************************************************************************************************
 *******************************************************************************************************************
                                                       nav-bar 
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.loading{
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-  background-color: rgba(0, 0, 0, .8);
-  z-index: 10;
-}
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   padding: 28px 20px;
@@ -40,71 +48,74 @@ nav{
   margin-inline: auto;
 }
 
-nav>.logo{
+nav > .logo {
   font-size: 24px;
 }
-nav>ul{
+nav > ul {
   display: flex;
 }
-nav>button{
+nav > button {
   display: none;
   padding: 0 5px;
   border: none;
   cursor: pointer;
 }
-nav>ul>li{
+nav > ul > li {
   list-style-type: none;
   display: block;
 }
-nav>ul>li>a{
+nav > ul > li > a {
   display: block;
   color: black;
   text-decoration: none;
   padding: 5px 10px;
 }
-nav>ul>li:hover{
-  background-color: #F2F2F2;
+nav > ul > li:hover {
+  background-color: #f2f2f2;
 }
-nav>.button{
+nav > .button {
   display: none;
 }
-.nav-scroll{
+.nav-scroll {
   padding: 20px 20px;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(3px);
   color: #fff;
 }
-.nav-scroll>ul>li>a{
+.nav-scroll > ul > li > a {
   color: #fff;
 }
 
-@media (min-width: 751px){
-  nav>ul{
+@media (min-width: 751px) {
+  nav > ul {
     gap: 20px;
   }
 }
-@media (max-width: 750px){
-  nav>.button{
-  display: block
+@media (max-width: 750px) {
+  nav > .button {
+    display: block;
   }
-  ul{
-  flex-direction: column;
-  position: absolute;
-  top: 105%;
-  left: 100%;
-  transition: 1s;
-  width: 100%;
-  text-align: end;
-  gap: 10px;
-  background-color: rgba(255, 255, 255, .9);
-  color: black;
+  ul {
+    flex-direction: column;
+    position: absolute;
+    top: 105%;
+    display: none;
+    left: 10px;
+    transition: 1s;
+    width: 100%;
+    text-align: end;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    height: 0;
+    overflow: hidden;
   }
-  ul>li{
+  ul > li {
     padding: 4px 12px;
   }
-  nav>.show{
-    left: 0;
+  nav > .show {
     transition: 1s;
+    height: 220px;
   }
 }
 
@@ -114,15 +125,15 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-1{
+.section-1 {
   height: 300px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding-top: 80px;
   margin-bottom: 100px;
   max-width: 2000px;
   margin-inline: auto;
 }
-.section-1>.photo-profil{
+.section-1 > .photo-profil {
   width: 380px;
   height: 380px;
   background-color: #f9dcdc;
@@ -134,22 +145,21 @@ nav>.button{
   z-index: 2;
 }
 
-@media (max-width: 750px){
-  .section-1{
+@media (max-width: 750px) {
+  .section-1 {
     height: 230px;
   }
-  .section-1>.photo-profil{
+  .section-1 > .photo-profil {
     width: 300px;
     height: 300px;
   }
 }
-@media (max-width: 425px){
-  .section-1{
+@media (max-width: 425px) {
+  .section-1 {
     height: 150px;
     margin-bottom: 80px;
-
   }
-  .section-1>.photo-profil{
+  .section-1 > .photo-profil {
     width: 200px;
     height: 200px;
   }
@@ -161,8 +171,7 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-
-.section-2{
+.section-2 {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
@@ -171,39 +180,36 @@ nav>.button{
   gap: 20px;
   width: 50%;
 }
-.section-2>.name{
+.section-2 > .name {
   font-size: 48px;
   font-weight: 300;
 }
-.section-2>.description{
+.section-2 > .description {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #333;
 }
-.section-2>.description>.description-secondary{
+.section-2 > .description > .description-secondary {
   display: none;
 }
-.section-2>.description>.show{
+.section-2 > .description > .show {
   display: block;
 }
-.section-2>.description{
-  color: #333;
-  transition: 2s;
-  overflow: hidden;
-  width: auto;
+.section-2 > .description p {
 }
 
-@media (max-width: 750px){
-  .section-2{
+@media (max-width: 750px) {
+  .section-2 {
     width: 75%;
   }
-  .section-2>.name{
+  .section-2 > .name {
     font-size: 36px;
     font-weight: 500;
   }
 }
-@media (max-width: 425px){
-  .section-2>.name{
+@media (max-width: 425px) {
+  .section-2 > .name {
     font-size: 20px;
   }
 }
@@ -214,49 +220,48 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-3{
+.section-3 {
   margin-top: 150px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
 }
-.section-3 .content img{
+.section-3 .content img {
   z-index: 3;
   max-width: 450px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 8px 8px 2px;
-
 }
-.section-3 .content{
+.section-3 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.section-3 .content .text{
-  max-width: 500px;
+.section-3 .content .text {
+  max-width: 300px;
 }
-@media (max-width: 1200px){
-  .section-3{
+@media (max-width: 1200px) {
+  .section-3 {
   }
-  .section-3 .content img{
+  .section-3 .content img {
     width: 350px;
   }
 }
-@media (max-width: 750px){
-  .section-3{
+@media (max-width: 750px) {
+  .section-3 {
   }
-  .section-3 .content img{
+  .section-3 .content img {
     width: 250px;
   }
 }
-@media (max-width: 550px){
-  .section-3{
+@media (max-width: 550px) {
+  .section-3 {
     flex-direction: column;
     padding: 20px;
     margin-top: 50px;
   }
-  .section-3 .content img{
+  .section-3 .content img {
     width: 100%;
   }
 }
@@ -267,13 +272,13 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-4{
+.section-4 {
   position: relative;
 }
 
-.section-4 .frame{
+.section-4 .frame {
   height: 300px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   bottom: -150px;
   width: 100%;
   position: absolute;
@@ -282,8 +287,8 @@ nav>.button{
   margin-inline: auto;
 }
 
-@media (max-width: 750px){
-  .section-4 .frame{
+@media (max-width: 750px) {
+  .section-4 .frame {
     height: 200px;
     bottom: -100px;
   }
@@ -293,7 +298,7 @@ nav>.button{
                                                       section5
 *******************************************************************************************************************
 *******************************************************************************************************************/
-.section-5{
+.section-5 {
   padding-top: 300px;
   display: flex;
   width: 60%;
@@ -303,66 +308,65 @@ nav>.button{
   border-bottom: 10px solid black;
   padding-bottom: 150px;
 }
-.section-5 .service-text, .section-5 .service-label{
+.section-5 .service-text,
+.section-5 .service-label {
   flex: 1;
 }
-.section-5 .service-text{
+.section-5 .service-text {
   font-size: 110px;
 }
-.section-5 .service-text>div:not(:last-child){
+.section-5 .service-text > div:not(:last-child) {
   font-weight: 100;
 }
-.section-5 .service-label{
+.section-5 .service-label {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
 }
-@media (max-width: 1500px){
-  .section-5{
+@media (max-width: 1500px) {
+  .section-5 {
     width: 80%;
   }
 }
-@media (max-width: 1200px){
-  .section-5 .service-label{
+@media (max-width: 1200px) {
+  .section-5 .service-label {
     font-size: 18px;
   }
 }
-@media (max-width: 1000px){
-  .section-5{
+@media (max-width: 1000px) {
+  .section-5 {
     flex-direction: column;
     align-items: center;
   }
-  .section-5 .service-text>div, .section-5 .service-label{
+  .section-5 .service-text > div,
+  .section-5 .service-label {
     text-align: center;
   }
 }
-@media (max-width: 750px){
-
-  .section-5{
+@media (max-width: 750px) {
+  .section-5 {
     padding-top: 200px;
   }
-  .section-5 .service-text{
+  .section-5 .service-text {
     font-size: 60px;
   }
 }
-@media (max-width: 450px){
-
-  .section-5{
+@media (max-width: 450px) {
+  .section-5 {
     gap: 28px;
     padding-bottom: 70px;
     border-bottom: 5px solid black;
   }
-  .section-5 .service-text{
+  .section-5 .service-text {
     display: flex;
     gap: 5px;
     font-size: 32px;
   }
-  .section-5 .service-label{
+  .section-5 .service-label {
     font-size: 14px;
   }
 }
-
 
 /******************************************************************************************************************
 *******************************************************************************************************************
@@ -370,46 +374,44 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-6{
+.section-6 {
   display: flex;
   flex-direction: column;
   gap: 150px;
   padding-top: 150px;
   align-items: center;
 }
-.section-6>div:first-child{
+.section-6 > div:first-child {
   font-size: 42px;
   width: 60%;
   max-width: 1200px;
   text-align: center;
   font-weight: 300;
 }
-.section-6 svg{
+.section-6 svg {
   max-width: 300px;
   max-height: 300px;
-  
 }
-@media (max-width: 1000px){
-  .section-6>div:first-child{
+@media (max-width: 1000px) {
+  .section-6 > div:first-child {
     font-size: 32px;
     width: 80%;
   }
-  .section-6 svg{
+  .section-6 svg {
     width: 200px;
     height: 200px;
   }
 }
-@media (max-width: 450px){
-  
-  .section-6{
+@media (max-width: 450px) {
+  .section-6 {
     padding-top: 80px;
     gap: 80px;
   }
-  .section-6>div:first-child{
+  .section-6 > div:first-child {
     font-size: 20px;
     width: 80%;
   }
-  .section-6 svg{
+  .section-6 svg {
     width: 100px;
     height: 100px;
   }
@@ -421,7 +423,7 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-7{
+.section-7 {
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -429,7 +431,7 @@ nav>.button{
   gap: 140px;
 }
 
-.section-7>div{
+.section-7 > div {
   display: flex;
   max-width: 1200px;
   margin-inline: auto;
@@ -438,53 +440,58 @@ nav>.button{
   align-items: self-start;
 }
 
-.section-7>div>div:last-child{
+.section-7 > div > div:last-child {
   flex: 1;
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
 }
-.section-7>div>div:last-child>img{
+.section-7 > div > div:last-child > img {
   width: 100%;
   height: auto;
 }
 
-.section-7>div>div:first-child{
+.section-7 > div > div:first-child {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 40px;
 }
-.section-7>div>div:first-child>div:first-child{
+.section-7 > div > div:first-child > div:first-child {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.section-7>div>div:first-child>div:first-child>div:first-child{
+.section-7 > div > div:first-child > div:first-child > div:first-child {
   font-size: 36px;
 }
-.section-7>div>div:first-child>div:first-child>div:first-child>span:last-child{
+.section-7
+  > div
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > span:last-child {
   font-weight: 200;
 }
-.section-7>div>div:first-child>div:first-child>div:last-child{
+.section-7 > div > div:first-child > div:first-child > div:last-child {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.section-7>div>div:first-child>div:first-child>div:last-child>div{
+.section-7 > div > div:first-child > div:first-child > div:last-child > div {
   color: white;
   background-color: #333;
   padding: 4px 12px;
   border-radius: 12px;
 }
-.section-7>div>div:first-child>div:last-child{
+.section-7 > div > div:first-child > div:last-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section-7>div>div:first-child>div:last-child>div:first-child:hover{
+.section-7 > div > div:first-child > div:last-child > div:first-child:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.section-7>div>div:first-child>div:last-child>div:last-child{
+.section-7 > div > div:first-child > div:last-child > div:last-child {
   display: flex;
   gap: 8px;
   border: 1px solid #333;
@@ -492,45 +499,45 @@ nav>.button{
   padding: 4px 12px;
   cursor: pointer;
 }
-.section-7>div>div:first-child>div:last-child>div:last-child:hover{
-  background-color: #F2F2F2;
+.section-7 > div > div:first-child > div:last-child > div:last-child:hover {
+  background-color: #f2f2f2;
 }
 
-.section-7>div>div:first-child>div:not(:first-child){
+.section-7 > div > div:first-child > div:not(:first-child) {
   font-size: 14px;
   color: #333;
 }
-@media (max-width: 1250px){
-  .section-7>div>div:first-child{
+@media (max-width: 1250px) {
+  .section-7 > div > div:first-child {
     gap: 20px;
   }
 }
-@media (max-width: 1000px){
-  .section-7{
+@media (max-width: 1000px) {
+  .section-7 {
     gap: 80px;
   }
-  .section-7>div{
+  .section-7 > div {
     flex-direction: column;
   }
 }
-@media (max-width: 450px){
-  .section-7{
+@media (max-width: 450px) {
+  .section-7 {
     gap: 40px;
   }
-  .section-7>div>div:first-child>div:first-child>div:first-child{
+  .section-7 > div > div:first-child > div:first-child > div:first-child {
     font-size: 32px;
   }
-  .section-7>div>div:first-child>div:first-child>div:last-child>div{
+  .section-7 > div > div:first-child > div:first-child > div:last-child > div {
     color: white;
     background-color: #333;
     padding: 2px 8px;
     border-radius: 12px;
     font-size: 12px;
   }
-  .section-7>div>div:first-child>div:not(:first-child){
+  .section-7 > div > div:first-child > div:not(:first-child) {
     font-size: 12px;
   }
-  .section-7>div>div:first-child>div:last-child>div:last-child{
+  .section-7 > div > div:first-child > div:last-child > div:last-child {
     display: flex;
     gap: 8px;
     border: 1px solid #333;
@@ -539,7 +546,7 @@ nav>.button{
     cursor: pointer;
     align-items: center;
   }
-  .section-7>div>div:first-child>div:last-child>div:last-child svg{
+  .section-7 > div > div:first-child > div:last-child > div:last-child svg {
     width: 15px;
     height: 15px;
   }
@@ -551,7 +558,7 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-8{
+.section-8 {
   display: flex;
   flex-direction: column;
   max-width: 2000px;
@@ -560,17 +567,17 @@ nav>.button{
   padding-top: 140px;
   gap: 40px;
 }
-.section-8>div:first-child{
+.section-8 > div:first-child {
   font-size: 36px;
   text-align: center;
 }
 
-.section-8>div:last-child{
+.section-8 > div:last-child {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
-.section-8>div:last-child>div{
+.section-8 > div:last-child > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -578,12 +585,12 @@ nav>.button{
   padding: 20px;
   border-radius: 4px;
   color: #333;
-  min-width: 60px;
+  flex: 1;
+  max-width: 200px;
   align-items: center;
 }
 
-.section-8>div:last-child>div>div:first-child{
-
+.section-8 > div:last-child > div > div:first-child {
   background-image: url("./assets/gst.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -592,13 +599,11 @@ nav>.button{
   height: 50px;
 }
 
-@media (max-width: 450px){
-
-  .section-8{
+@media (max-width: 450px) {
+  .section-8 {
     padding-top: 80px;
   }
-  .section-8>div:first-child{
-
+  .section-8 > div:first-child {
     font-size: 28px;
   }
 }
@@ -609,35 +614,35 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-9{
+.section-9 {
   max-width: 1200px;
   padding-top: 140px;
   margin-inline: auto;
   width: 80%;
 }
-.section-9>div:first-child{
+.section-9 > div:first-child {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.section-9>div:first-child>div:first-child{
+.section-9 > div:first-child > div:first-child {
   font-size: 36px;
   text-align: center;
 }
-.section-9>div:first-child>div:last-child{
+.section-9 > div:first-child > div:last-child {
   font-size: 18px;
   text-align: center;
   color: #333;
 }
 
-.section-9>div:last-child{
+.section-9 > div:last-child {
   padding-block: 32px;
   display: flex;
   gap: 20px;
   flex: 1;
   flex-wrap: wrap;
 }
-.section-9>div:last-child>div{
+.section-9 > div:last-child > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -648,23 +653,23 @@ nav>.button{
   min-width: 180px;
   flex: 1;
 }
-.section-9>div:last-child>div>div:first-child{
+.section-9 > div:last-child > div > div:first-child {
   padding: 32px;
   background-color: #333;
   border-radius: 50%;
 }
-.section-9>div:last-child>div>div:not(:first-child, :last-child){
+.section-9 > div:last-child > div > div:not(:first-child, :last-child) {
   font-weight: bold;
 }
 
-@media (max-width: 450px){
-  .section-9{
+@media (max-width: 450px) {
+  .section-9 {
     padding-top: 80px;
   }
-  .section-9>div:first-child>div:first-child{
+  .section-9 > div:first-child > div:first-child {
     font-size: 32px;
   }
-  .section-9>div:first-child>div:last-child{
+  .section-9 > div:first-child > div:last-child {
     font-size: 14px;
   }
 }
@@ -675,49 +680,51 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-.section-10{
+.section-10 {
   max-width: 1200px;
   display: flex;
   margin-inline: auto;
   width: 80%;
   padding-block: 40px;
 }
-.section-10>div{
+.section-10 > div {
   flex: 1;
 }
-.section-10>div:first-child{
+.section-10 > div:first-child {
   background-image: url("./assets/pic2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.section-10>div:last-child{
+.section-10 > div:last-child {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 48px;
 }
-.section-10>div:last-child input, .section-10>div:last-child textarea{
+.section-10 > div:last-child input,
+.section-10 > div:last-child textarea {
   padding: 12px 16px;
   font-size: 1em;
   border: 1px solid #ccc;
 }
-.section-10>div:last-child input:focus-within, .section-10>div:last-child textarea:focus-within{
+.section-10 > div:last-child input:focus-within,
+.section-10 > div:last-child textarea:focus-within {
   /* border: ; */
 }
-.section-10>div:last-child input[type="button"]{
+.section-10 > div:last-child input[type="button"] {
   background-color: rgb(54, 54, 245);
   color: white;
 }
-@media (max-width: 850px){
-  .section-10>div:first-child{
+@media (max-width: 850px) {
+  .section-10 > div:first-child {
     display: none;
   }
 }
-@media (max-width: 450px){
-  .section-10>div:last-child{
-  padding: 12px;
-}
+@media (max-width: 450px) {
+  .section-10 > div:last-child {
+    padding: 12px;
+  }
 }
 
 /******************************************************************************************************************
@@ -726,32 +733,31 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-
-.section-11{
+.section-11 {
   padding: 100px;
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("./assets/footer-img.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./assets/footer-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   max-width: 2000px;
   margin-inline: auto;
 }
-.section-11>div:first-child{
+.section-11 > div:first-child {
   font-size: 24px;
   text-align: center;
   padding-bottom: 20px;
 }
-.section-11>div:last-child{
+.section-11 > div:last-child {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-@media (max-width: 500px){
-  .section-11{
+@media (max-width: 500px) {
+  .section-11 {
     padding: 40px;
   }
 }
-
 
 /******************************************************************************************************************
 *******************************************************************************************************************
@@ -759,37 +765,37 @@ nav>.button{
 *******************************************************************************************************************
 *******************************************************************************************************************/
 
-footer{
+footer {
   background-color: #000;
   padding: 48px;
   color: white;
   max-width: 2000px;
   margin-inline: auto;
 }
-footer>div:first-child{
+footer > div:first-child {
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
 }
-footer>div:first-child>div{
+footer > div:first-child > div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-footer>div:last-child{
+footer > div:last-child {
   font-size: 16px;
   text-align: center;
   padding-top: 20px;
   border-top: 2px solid white;
 }
-@media (max-width: 700px){
-  footer{
+@media (max-width: 700px) {
+  footer {
     padding: 20px;
   }
-  footer>div:first-child>div{
+  footer > div:first-child > div {
     text-align: center;
   }
-  footer>div:first-child{
+  footer > div:first-child {
     flex-direction: column;
     gap: 40px;
   }
