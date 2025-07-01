@@ -1,5 +1,5 @@
 AOS.init();
-
+emailjs.init("Ekn6p17glPeRY9g54");
 
 //////////////////////////////////////////////////////constants//////////////////////////////////////////////////////
 
@@ -180,7 +180,28 @@ const setTechnologies = () => {
   }
 }
 
+const enregistrer = () => {
+  console.log("xxx")
+
+  const params = {
+    from_name: "Ludores",
+    to_name: "Client",
+    message: "Ceci est un message sans formulaire.",
+    reply_to: "ludo@example.com"
+  };
+  emailjs.send("service_fo202e9", "template_tsitqmu", params)
+  .then(function(response) {
+    alert("E-mail envoyé avec succès !");
+    console.log("SUCCESS!", response.status, response.text);
+  }, function(error) {
+    alert("Erreur lors de l'envoi.");
+    console.log("FAILED...", error);
+  });
+}
+
 //event Listener
 document.addEventListener("scroll", scrollEvent);
 
 document.addEventListener("DOMContentLoaded", DomContentLoaded);
+
+

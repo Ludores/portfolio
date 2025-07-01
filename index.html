@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
   </head>
   <body  id="accueil">
     <div class="loading"></div>
@@ -297,7 +299,7 @@
         <input type="text" placeholder="Votre mail">
         <input type="text" placeholder="Objet de votre message">
         <textarea rows="7" name="" id="" placeholder="Message en question"></textarea>
-        <input type="button" value="Envoyer">
+        <input type="button" value="Envoyer" onclick="enregistrer()">
       </div>
     </section>
 
