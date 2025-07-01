@@ -1,5 +1,5 @@
 AOS.init();
-emailjs.init("Ekn6p17glPeRY9g54");
+emailjs.init("VLotxSJrdaTeXXa8f");
 
 //////////////////////////////////////////////////////constants//////////////////////////////////////////////////////
 
@@ -36,16 +36,16 @@ const portfolio = [
     git: "https://www.facebook.com",
     image: "./assets/back-office.png",
   },
-  {
-    title: "Jeu de bulle ",
-    type: "site Web",
-    technologies: ["HTML", "Css", "Javascript"],
-    description:
-      "Projet personnel développé pour le plaisir, il s’agit d’un jeu de bulles éducatif visant à améliorer la dactylographie. L’utilisateur doit taper les lettres qui apparaissent dans les bulles avant qu’elles ne tombent. Réalisé entièrement en HTML, CSS et JavaScript pur, ce projet m’a permis de renforcer mes bases en développement web tout en explorant des mécaniques simples de jeu et d’interaction.",
-    link: "https://www.facebook.com",
-    git: "https://www.facebook.com",
-    image: "./assets/gst.jpg",
-  },
+  // {
+  //   title: "Jeu de bulle ",
+  //   type: "site Web",
+  //   technologies: ["HTML", "Css", "Javascript"],
+  //   description:
+  //     "Projet personnel développé pour le plaisir, il s’agit d’un jeu de bulles éducatif visant à améliorer la dactylographie. L’utilisateur doit taper les lettres qui apparaissent dans les bulles avant qu’elles ne tombent. Réalisé entièrement en HTML, CSS et JavaScript pur, ce projet m’a permis de renforcer mes bases en développement web tout en explorant des mécaniques simples de jeu et d’interaction.",
+  //   link: "https://www.facebook.com",
+  //   git: "https://www.facebook.com",
+  //   image: "./assets/gst.jpg",
+  // },
   {
     title: "FS Manager ",
     type: "Desktop",
@@ -185,18 +185,29 @@ const enregistrer = () => {
 
   const params = {
     from_name: "Ludores",
-    to_name: "Client",
     message: "Ceci est un message sans formulaire.",
-    reply_to: "ludo@example.com"
+    reply_to: "bejeryludores@gmail.com"
   };
-  emailjs.send("service_fo202e9", "template_tsitqmu", params)
-  .then(function(response) {
-    alert("E-mail envoyé avec succès !");
-    console.log("SUCCESS!", response.status, response.text);
-  }, function(error) {
-    alert("Erreur lors de l'envoi.");
-    console.log("FAILED...", error);
-  });
+  // emailjs.send("service_fo202e9", "template_tsitqmu", params, "VLotxSJrdaTeXXa8f")
+  // .then(function(response) {
+  //   alert("E-mail envoyé avec succès !");
+  //   console.log("SUCCESS!", response.status, response.text);
+  // }, function(error) {
+  //   alert("Erreur lors de l'envoi.");
+  //   console.log("FAILED...", error);
+  // });
+  emailjs.send("service_e00ayg6", "template_tsitqmu", {
+        from_name: "bejery",
+        reply_to: "larrysrakoto@gmail.com",
+        message: "nous avons besoin de vous pour une sevice qu'on veut mettre en place"
+      }).then(
+        function(response) {
+          alert("Message envoyé !");
+        },
+        function(error) {
+          alert("Erreur : " + error.text); // Ici s'affichera "412" si tu as mal écrit un champ
+        }
+      );
 }
 
 //event Listener
