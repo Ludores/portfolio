@@ -176,40 +176,70 @@ const setTechnologies = () => {
   }
 };
 
-const enregistrer = () => {
-  console.log("xxx");
-
+const sendMail = (e) => {
+  e.preventDefault();
   const loading = document.querySelector(".loading");
-  const svg1 = document.querySelector(".loading>div:first-child>div:first-child>svg:first-child");
-  const svg2 = document.querySelector(".loading>div:first-child>div:first-child>svg:last-child");
-  const text = document.querySelector(".loading>div:first-child>div:last-child")
-  const divRotate = document.querySelector(".loading>div:first-child>div:first-child")
+  const parentSvg = document.querySelector(".loading>div:first-child>div:first-child")
+
+  const svg1 = parentSvg.children[0]
+  const svg2 = parentSvg.children[1]
+  const svg3 = parentSvg.children[2]
+  const text = document.querySelector(
+    ".loading>div:first-child>div:last-child"
+  );
+  const divRotate = document.querySelector(
+    ".loading>div:first-child>div:first-child"
+  );
+  const inputs = document.querySelectorAll(".section-10>form>input")
+  const message = document.querySelector(".section-10>form>textarea")
 
   loading.style.display = "flex";
   svg1.style.display = "block";
   svg2.style.display = "none";
-  text.innerHTML = "Envoie du mail"
+  svg3.style.display = "none";
+  text.innerHTML = "Envoie du mail";
 
   emailjs
     .send("service_e00ayg6", "template_tsitqmu", {
-      from_name: "bejery",
-      reply_to: "larrysrakoto@gmail.com",
-      message:
-        "nous avons besoin de vous pour une sevice qu'on veut mettre en place",
+      from_name: inputs[0].value,
+      reply_to: inputs[1].value,
+      message: message.value,
     })
     .then(
       function (response) {
         svg1.style.display = "none";
         svg2.style.display = "block";
+        svg3.style.display = "none";
         text.innerHTML = "Mail envoyé !"
-        divRotate.style.animation = ""
+        divRotate.style.animation = "none"
         setTimeout(() => {
           divRotate.style.animation = "load 3s infinite linear"
           loading.style.display = "none";
-        }, 1000);
+          svg2.style.display = "none";
+
+          inputs[0].value = ""
+          inputs[1].value = ""
+          message.value = ""
+        }, 2000);
       },
       function (error) {
-        alert("Erreur : " + error.text); // Ici s'affichera "412" si tu as mal écrit un champ
+        svg1.style.display = "none";
+        svg2.style.display = "none";
+        svg3.style.display = "block";
+
+        text.innerHTML = "Mail non envoyé !"
+        divRotate.style.animation = "none"
+        setTimeout(() => {
+          divRotate.style.animation = "load 3s infinite linear"
+          loading.style.display = "none";
+          svg3.style.display = "none";
+
+          inputs[0].value = ""
+          inputs[1].value = ""
+          message.value = ""
+        }, 2000);
+        
+
       }
     );
 };
