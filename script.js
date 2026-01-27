@@ -20,22 +20,12 @@ const portfolio = [
     type: "Desketop",
     technologies: ["VueJS", "Express", "Electron", "ExpressJs", "IndexedDB"],
     description:
-      "<b>Développement fullStack: </b>Ce projet consiste en la conception d’une application desktop complète permettant de gérer plusieurs magasins de manière centralisée. Chaque magasin dispose de son propre espace pour enregistrer les entrées et sorties de produits, suivre les ventes quotidiennes, la gestion des stocks, et les mouvements de caisse. Les utilisateurs (vendeurs, gestionnaires) peuvent enregistrer en temps réel chaque opération effectuée (approvisionnement, vente, retour, perte, etc.). L’espace 'Boss' ou administration centrale permet quant à lui de visualiser et superviser l’ensemble des activités de tous les magasins. Grâce à un tableau de bord intuitif, le responsable peut",
+      "Ce projet consiste en la conception d’une application desktop complète permettant de gérer plusieurs magasins de manière centralisée. Chaque magasin dispose de son propre espace pour enregistrer les entrées et sorties de produits, suivre les ventes quotidiennes, la gestion des stocks, et les mouvements de caisse. Les utilisateurs (vendeurs, gestionnaires) peuvent enregistrer en temps réel chaque opération effectuée (approvisionnement, vente, retour, perte, etc.). L’espace 'Boss' ou administration centrale permet quant à lui de visualiser et superviser l’ensemble des activités de tous les magasins. Grâce à un tableau de bord intuitif, le responsable peut",
     link: "https://www.facebook.com",
     git: "https://www.facebook.com",
     image: "./assets/gst.jpg",
   },
-  {
-    title: "CashPointer ",
-    type: "Site Web",
-    technologies: ["NextJS", "Scss", "Tailwind", "NestJs"],
-    description:
-      '<b>Développement backOffice: </b>Il s’agit d’un système complet de gestion de cashpoints, permettant de suivre en temps réel toutes les transactions financières effectuées dans plusieurs points de service (dépôts, retraits, transferts, paiements, approvisionnements, etc.). Chaque opération est enregistrée avec précision, incluant le montant, l’agent concerné, le solde avant/après, et la nature de la transaction. Grâce à un espace administrateur dédié, le responsable ou "boss" peut visualiser à distance l’ensemble des activités de tous les cashpoints, consulter les soldes disponibles, détecter d’éventuels déséquilibres de caisse, générer des rapports financiers et assurer un contrôle global sur les opérations quotidiennes, assurant ainsi une traçabilité, une sécurité et une vision centralisée de toute l’activité du réseau.',
-    link: "https://www.facebook.com",
-    git: "https://www.facebook.com",
-    image: "./assets/back-office.png",
-  },
-  // {
+  //   {
   //   title: "Jeu de bulle ",
   //   type: "site Web",
   //   technologies: ["HTML", "Css", "Javascript"],
@@ -46,11 +36,21 @@ const portfolio = [
   //   image: "./assets/gst.jpg",
   // },
   {
+    title: "CashPointer ",
+    type: "Site Web",
+    technologies: ["NextJS", "Scss", "Tailwind", "NestJs"],
+    description:
+      'Il s’agit d’un système complet de gestion de cashpoints, permettant de suivre en temps réel toutes les transactions financières effectuées dans plusieurs points de service (dépôts, retraits, transferts, paiements, approvisionnements, etc.). Chaque opération est enregistrée avec précision, incluant le montant, l’agent concerné, le solde avant/après, et la nature de la transaction. Grâce à un espace administrateur dédié, le responsable ou "boss" peut visualiser à distance l’ensemble des activités de tous les cashpoints, consulter les soldes disponibles, détecter d’éventuels déséquilibres de caisse, générer des rapports financiers et assurer un contrôle global sur les opérations quotidiennes, assurant ainsi une traçabilité, une sécurité et une vision centralisée de toute l’activité du réseau.',
+    link: "https://www.facebook.com",
+    git: "https://www.facebook.com",
+    image: "./assets/back-office.png",
+  },
+  {
     title: "FS Manager ",
     type: "Desktop",
     technologies: ["ReactJS", "Scss", "Electon", "ExpressJs", "IndexedDB"],
     description:
-      "<b>Développement FrontEnd: </b>Il s’agit d’une application desktop développée pour les responsables clientèle de <a href='https://www.facebook.com/fiharysoftformation'>FiharySoft</a>, destinée à assurer le suivi complet des étudiants tout au long de leur parcours. L’application permet de gérer l’ensemble du processus : depuis l’enregistrement initial de l’étudiant, son assignation à une formation, le suivi de sa progression, jusqu’à l’émission de son certificat en fin de cursus. Cette solution vise à optimiser la gestion administrative et à garantir une traçabilité claire et efficace du parcours de chaque apprenant.",
+      "Il s’agit d’une application desktop développée pour les responsables clientèle de <a href='https://www.facebook.com/fiharysoftformation'>FiharySoft</a>, destinée à assurer le suivi complet des étudiants tout au long de leur parcours. L’application permet de gérer l’ensemble du processus : depuis l’enregistrement initial de l’étudiant, son assignation à une formation, le suivi de sa progression, jusqu’à l’émission de son certificat en fin de cursus. Cette solution vise à optimiser la gestion administrative et à garantir une traçabilité claire et efficace du parcours de chaque apprenant.",
     link: "https://www.facebook.com",
     git: "https://www.facebook.com",
     image: "./assets/fs-manager.jpeg",
