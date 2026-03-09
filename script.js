@@ -97,14 +97,6 @@ const showMoreDescription = () => {
     element.classList.toggle("show");
   });
 };
-const DomContentLoaded = () => {
-  const loading = document.querySelector(".loading");
-  loading.style.display = "none";
-
-  setPortfolio();
-  setTechnologies();
-  AOS.refreshHard();
-};
 
 const setPortfolio = () => {
   const section7 = document.querySelector(".section-7");
@@ -242,6 +234,38 @@ const sendMail = (e) => {
 
       }
     );
+};
+
+const initTypeIt = () => {
+  new TypeIt("#job", {
+    strings: ["Ingénieur - Développeur FullStack Typescript", "( ReactJS - NodeJS - VueJS )"],
+    speed: 25,
+    nextStringDelay: 500
+  }).go();
+}
+
+const initChat = () => {
+  const items = document.querySelectorAll('.item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(i => observer.observe(i));
+}
+
+const DomContentLoaded = () => {
+  const loading = document.querySelector(".loading");
+  loading.style.display = "none";
+
+  initTypeIt()
+  // setPortfolio();
+  initChat()
+  setTechnologies();
+  AOS.refreshHard();
 };
 
 //event Listener

@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="BEJERY Ludorès, Développeur Full-Stack spécialisé en TypeScript, création de sites web performants et modernes. Basé à Madagascar.">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Développeur Web Full-Stack">
-    <meta property="og:description" content="Spécialiste en TypeScript et React.">
-    <meta property="og:image" content="https://www.monsite.com/preview.jpg">
-    <meta property="og:url" content="https://www.monsite.com">
+    <meta
+      name="description"
+      content="BEJERY Ludorès, Développeur Full-Stack spécialisé en TypeScript, création de sites web performants et modernes. Basé à Madagascar."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Développeur Web Full-Stack" />
+    <meta
+      property="og:description"
+      content="Spécialiste en TypeScript et React."
+    />
+    <meta property="og:image" content="https://www.monsite.com/preview.jpg" />
+    <meta property="og:url" content="https://www.monsite.com" />
 
-    <link rel="canonical" href="https://ludores-bejery.vercel.app/">
+    <link rel="canonical" href="https://ludores-bejery.vercel.app/" />
     <title>BEJERY Ludorès</title>
     <link rel="stylesheet" href="./style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -19,6 +25,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
   </head>
   <body id="accueil">
     <div class="loading">
@@ -95,7 +102,6 @@
         <div>Ludores</div>
       </div>
     </div>
-    <!-- loading animation https://www.youtube.com/shorts/Vt8VRHk2SPY -->
     <nav>
       <div class="logo">Ludores</div>
       <div class="button" onclick="show_nav_ul()">show</div>
@@ -112,19 +118,19 @@
 
     <section class="section-2">
       <h1>BEJERY Ludorès</h1>
-      <div class="work">Ingénieur - Développeur FullStack Typescript</div>
+      <!-- <div class="work">Ingénieur - Développeur FullStack Typescript</div> -->
+      <div id="job"></div>
       <div class="description">
         <p>
           Développeur informatique passionné, cela fait maintenant
-          <span class="principal">4 ans</span> que je me suis pleinement investi
-          dans cet univers. Au fil des années, j’ai eu l’opportunité de mener
-          plusieurs projets de A à Z, en assurant aussi bien la conception côté
-          backend que le développement frontend.
+          <b>4 ans</b> que je me suis pleinement investi dans cet univers. Au
+          fil des années, j’ai eu l’opportunité de mener plusieurs projets de A
+          à Z, en assurant aussi bien la conception côté backend que le
+          développement frontend.
         </p>
         <p class="description-secondary">
-          Titulaire d’une <b>Licence</b> et d’un <b>Master</b> en génie
-          logiciel et base de données de l’École Nationale d’Informatique
-          de Fianarantsoa
+          Titulaire d’une <b>Licence</b> et d’un <b>Master</b> en génie logiciel
+          et base de données de l’École Nationale d’Informatique de Fianarantsoa
         </p>
         <p class="description-secondary">
           Je propose des services complets en développement web, du site vitrine
@@ -135,7 +141,7 @@
       <div class="plus" onclick="showMoreDescription()">Voir Plus</div>
     </section>
 
-    <section class="section-3">
+    <!-- <section class="section-3">
       <div class="content">
         <div class="text">
           "Coder n’est pas seulement un travail : c’est une passion, une
@@ -147,10 +153,29 @@
       <div class="content">
         <img src="./assets/pic2.jpg" alt="" srcset="" />
       </div>
-    </section>
+    </section> -->
     <section class="section-4">
-      <div class="frame"></div>
+      <div class="cards">
+        <div class="card" data-aos="fade-right">
+          <span class="card-index">01</span>
+          <div class="card-number">4</div>
+          <span class="card-label">Années d'expérience</span>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+          <span class="card-index">02</span>
+          <div class="card-number">20+</div>
+          <span class="card-label">Projets réalisés</span>
+        </div>
+
+        <div class="card" data-aos="fade-left">
+          <span class="card-index">03</span>
+          <div class="card-number">∞</div>
+          <span class="card-label">Curiosité</span>
+        </div>
+      </div>
     </section>
+
     <section class="section-5" id="service">
       <div class="service-text">
         <div data-aos="fade-right">Je</div>
@@ -167,69 +192,380 @@
         performantes et durables.
       </div>
     </section>
-    <section class="section-6">
-      <div data-aos="fade-down">
-        Voici quelques projets que j’ai eu l’opportunité de réaliser ces
-        derniers temps
+
+    <section class="section-timeline">
+      <div class="section-head">
+        <span class="badge">Mon parcours</span>
+        <p class="description">
+          Voici un aperçu de mon parcours et des expériences qui ont façonné mon
+          évolution en tant que développeur.
+        </p>
       </div>
-      <svg
-        data-aos="fade-down"
-        fill="#000000"
-        width="300px"
-        height="300px"
-        viewBox="0 0 24 24"
-        id="down-double-arrow"
-        data-name="Flat Line"
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon flat-line"
-      >
-        <polyline
-          id="primary"
-          points="4 17 7 20 10 17"
-          style="
-            fill: none;
-            stroke: rgb(0, 0, 0);
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 2;
-          "
-        ></polyline>
-        <path
-          id="primary-2"
-          data-name="primary"
-          d="M7,4V20M17,4V20"
-          style="
-            fill: none;
-            stroke: rgb(0, 0, 0);
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 2;
-          "
-        ></path>
-        <polyline
-          id="primary-3"
-          data-name="primary"
-          points="14 17 17 20 20 17"
-          style="
-            fill: none;
-            stroke: rgb(0, 0, 0);
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 2;
-          "
-        ></polyline>
-      </svg>
-      <div id="portfolio">Mon portfolio</div>
+      <div class="timeline">
+        <!-- 2022-2026 -->
+        <div class="item">
+          <div class="card blue">
+            <span class="card-year-badge">2022-2026</span>
+            <p class="card-role">Développeur fullStack Typescript</p>
+            <p class="card-company">FiharySoft</p>
+            <p class="card-desc">
+              Responsable du cycle complet de développement des applications, de
+              la phase de conception jusqu’au déploiement en production, en
+              veillant à la qualité, à la performance et à la fiabilité des
+              solutions mises en place.
+            </p>
+            <!-- <div class="card-meta">
+              NIF : 3013605717<br />
+              STAT : 74908212023000908
+            </div> -->
+          </div>
+          <div class="node">
+            <div class="node-circle">Fs</div>
+            <span class="node-year">2022-2026</span>
+          </div>
+        </div>
+
+        <!-- 2023-2025 -->
+        <div class="item right">
+          <div class="card orange">
+            <span class="card-year-badge">2023-2025</span>
+            <p class="card-role">Consultant - Développeur fullStack</p>
+            <p class="card-company">Mahiratra-Groupe</p>
+            <p class="card-desc">
+              Conception et la réalisation de leurs applications, de l’analyse
+              des besoins jusqu’à la mise en production.
+            </p>
+          </div>
+          <div class="node">
+            <div class="node-circle">MG</div>
+            <span class="node-year">2023-2025</span>
+          </div>
+        </div>
+
+        <!-- 2025-2023 -->
+        <div class="item">
+          <div class="card red">
+            <span class="card-year-badge">2025-2023</span>
+            <p class="card-role">Master - Licence</p>
+            <p class="card-company">ENI - Fianarantsoa</p>
+            <p class="card-desc">
+              Master professionnel en informatique obtenu en 2025, après une
+              Licence en 2023 avec une spécialisation en génie logiciel et bases
+              de données.
+            </p>
+          </div>
+          <div class="node">
+            <div class="node-circle">ML</div>
+            <span class="node-year">2025-2023</span>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section class="section-6" id="portfolio">
+      <div class="section-head">
+        <span class="badge">Mon Portfolio</span>
+        <p class="description">
+          Voici un aperçu de mes réalisations et projets, illustrant mon savoir-faire en développement et gestion de solutions numériques.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card" >
+          <img class="card__img" src="./assets/fs-manager.png" data-aos="fade-up" loading="lazy"/>
+          <div class="card__frame"></div>
+          <div class="card__overlay">
+            <!-- Sticky header -->
+            <div class="overlay__head">
+              <!-- <p class="ov ov__num">Projet 01</p> -->
+              <h3 class="ov ov__title">
+                FiharySoft<br />Gestion des Étudiants
+              </h3>
+              <p class="ov ov__role">Développeur FullStack backOffice</p>
+            </div>
+            <!-- Scrollable body -->
+            <div class="overlay__body">
+              <div class="ov ov__divider"></div>
+              <p class="ov ov__desc">
+                L’application permet de gérer efficacement un centre de formation en 
+                centralisant l’inscription des apprenants, l’assignation aux formations, 
+                le suivi des paiements et transactions, ainsi que la progression dans les modules.
+                Elle facilite la communication avec les apprenants, génère des rapports sur les activités 
+                et garantit une gestion sécurisée et organisée de toutes les opérations du centre.              </p>
+              <div class="ov ov__tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Mongodb</span>
+                <span class="tag">REST API</span>
+                <span class="tag">JWT Auth</span>
+              </div>
+              <a href="https://www.fiharysoft.com/" target="_blank" class="ov ov__btn">
+                Voir le projet
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <div class="overlay__fade"></div>
+          </div>
+        </div>
+        
+        <div class="card" >
+          <img class="card__img" src="./assets/portfolio-design.png" data-aos="fade-up" loading="lazy"/>
+          <div class="card__frame"></div>
+          <div class="card__overlay">
+            <!-- Sticky header -->
+            <div class="overlay__head">
+              <!-- <p class="ov ov__num">Projet 02</p> -->
+              <h3 class="ov ov__title">Portfolio<br />BEJERY Ludorès</h3>
+              <p class="ov ov__role">Développeur Frontend</p>
+            </div>
+            <!-- Scrollable body -->
+            <div class="overlay__body">
+              <div class="ov ov__divider"></div>
+              <p class="ov ov__desc">
+                Mon portfolio a été conçu uniquement avec HTML et CSS 
+                pour montrer qu’il est possible de créer un site fonctionnel et 
+                esthétique même avec des technologies simples. Il présente mes 
+                réalisations et projets, tout en mettant en avant ma capacité à 
+                organiser et structurer le contenu de manière professionnelle.
+              </p>
+              <div class="ov ov__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavasCript</span>
+              </div>
+              <a href="#" class="ov ov__btn">
+                Voir le projet
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <div class="overlay__fade"></div>
+          </div>
+        </div>
+        
+        <div class="card" >
+          <img class="card__img" src="./assets/solution-facile.png" loading="lazy" data-aos="fade-up"/>
+          <div class="card__frame"></div>
+          <div class="card__overlay">
+            <!-- Sticky header -->
+            <div class="overlay__head">
+              <!-- <p class="ov ov__num">Projet 02</p> -->
+              <h3 class="ov ov__title">SolutionFacile</h3>
+              <p class="ov ov__role">Développeur Frontend</p>
+            </div>
+            <!-- Scrollable body -->
+            <div class="overlay__body">
+              <div class="ov ov__divider"></div>
+              <p class="ov ov__desc">
+                Ce projet est une plateforme qui permet aux professionnels de publier leurs besoins 
+                ou annonces et de se connecter facilement avec d’autres utilisateurs. Chaque annonce 
+                peut générer des échanges directs via WhatsApp, facilitant la communication instantanée 
+                et la mise en relation entre professionnels pour collaborer ou répondre aux opportunités.
+              </p>
+              <div class="ov ov__tags">
+                <span class="tag">NextJS</span>
+                <span class="tag">Laravel</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">React Query</span>
+              </div>
+              <a href="https://www.solutionsfaciles.com/" target="_blank" class="ov ov__btn">
+                Voir le projet
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <div class="overlay__fade"></div>
+          </div>
+        </div>
+        <div class="card" >
+          <img class="card__img" src="./assets/ariari-design.png" data-aos="fade-up" loading="lazy"/>
+          <div class="card__frame"></div>
+          <div class="card__overlay">
+            <!-- Sticky header -->
+            <div class="overlay__head">
+              <!-- <p class="ov ov__num">Projet 02</p> -->
+              <h3 class="ov ov__title">AriaryPay</h3>
+              <p class="ov ov__role">Développeur Frontend</p>
+            </div>
+            <!-- Scrollable body -->
+            <div class="overlay__body">
+              <div class="ov ov__divider"></div>
+              <p class="ov ov__desc">
+                Cette plateforme permet aux clients de trouver et collaborer avec des développeurs, 
+                tout en offrant un système de paiement en ligne sécurisé pour faciliter les transactions.
+              </p>
+              <div class="ov ov__tags">
+                <span class="tag">NextJS</span>
+                <span class="tag">NestJS</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">React Query</span>
+              </div>
+              <a href="https://ariari.mg/"  target="_blank" class="ov ov__btn">
+                Voir le projet
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <div class="overlay__fade"></div>
+          </div>
+        </div>
+        <div class="card" >
+          <img class="card__img" src="./assets/gst-design.png" data-aos="fade-up" loading="lazy"/>
+          <div class="card__frame"></div>
+          <div class="card__overlay">
+            <!-- Sticky header -->
+            <div class="overlay__head">
+              <!-- <p class="ov ov__num">Projet 02</p> -->
+              <h3 class="ov ov__title">STR360</h3>
+              <p class="ov ov__role">Développeur FullStack</p>
+            </div>
+            <!-- Scrollable body -->
+            <div class="overlay__body">
+              <div class="ov ov__divider"></div>
+              <p class="ov ov__desc">
+                Ce projet est une application desktop de gestion de stock multi-magasin, permettant de suivre 
+                l’entrée et la sortie des produits, de gérer les ventes et transactions, et d’obtenir 
+                un suivi précis de l’inventaire pour chaque magasin. Il centralise toutes les opérations pour 
+                offrir une gestion efficace et organisée de l’entrepôt.
+              </p>
+              <div class="ov ov__tags">
+                <span class="tag">VueJS</span>
+                <span class="tag">NodeJS express</span>
+                <span class="tag">IndexedDB</span>
+                <span class="tag">Electron</span>
+                <span class="tag">Web Socket</span>
+              </div>
+              <b class="ov ov__btn">
+                Desktop Application
+              </b>
+            </div>
+            <div class="overlay__fade"></div>
+          </div>
+        </div>
+        <div class="card" >
+          <img class="card__img" src="./assets/back-office.png" data-aos="fade-up" loading="lazy"/>
+          <div class="card__frame"></div>
+          <div class="card__overlay">
+            <!-- Sticky header -->
+            <div class="overlay__head">
+              <!-- <p class="ov ov__num">Projet 02</p> -->
+              <h3 class="ov ov__title">CPR</h3>
+              <p class="ov ov__role">Développeur FrontEnd backOffice</p>
+            </div>
+            <!-- Scrollable body -->
+            <div class="overlay__body">
+              <div class="ov ov__divider"></div>
+              <p class="ov ov__desc">
+                Ce projet est une application qui permet de suivre les transactions et mouvements 
+                d’argent en temps réel. Elle centralise les flux financiers, facilite la gestion 
+                des encaissements et paiements, et offre un suivi précis et instantané des opérations 
+                pour une meilleure transparence et contrôle.
+              </p>
+              <div class="ov ov__tags">
+                <span class="tag">NextJS</span>
+                <span class="tag">NestJS</span>
+              </div>
+              <b class="ov ov__btn">
+                Non visitable
+              </b>
+            </div>
+            <div class="overlay__fade"></div>
+          </div>
+        </div>
+        <div class="card" >
+          <img class="card__img" src="./assets/jeu-boule.png" data-aos="fade-up" loading="lazy"/>
+          <div class="card__frame"></div>
+          <div class="card__overlay">
+            <!-- Sticky header -->
+            <div class="overlay__head">
+              <!-- <p class="ov ov__num">Projet 02</p> -->
+              <h3 class="ov ov__title">Dactyl'Or</h3>
+              <p class="ov ov__role">Développeur FrontEnd</p>
+            </div>
+            <!-- Scrollable body -->
+            <div class="overlay__body">
+              <div class="ov ov__divider"></div>
+              <p class="ov ov__desc">
+                Dactyl'Or est un outil interactif de perfectionnement en dactylographie, 
+                entièrement développé en HTML, CSS et JavaScript, utilisant la m
+                anipulation du DOM pour offrir une expérience pratique et dynamique aux utilisateurs.
+              </p>
+              <div class="ov ov__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavasCript</span>
+              </div>
+               <a href="https://jeu-bulle-oz2idjobp-bejerys-projects.vercel.app/" target="_blank" class="ov ov__btn">
+                Voir le projet
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+            <div class="overlay__fade"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section-7"></section>
     <section class="section-8">
-      <div>Mes technologies</div>
+      <div class="section-head">
+        <span class="badge">Mon Expérience</span>
+        <p class="description">
+          Mon parcours professionnel dans le développement web, des stages
+          formatifs au freelancing.
+        </p>
+      </div>
       <div></div>
     </section>
-    <section class="section-9">
-      <div id="contact">
-        <div>Contacter moi</div>
-        <div>Parlons de vos besoins</div>
+
+    <section class="section-9" id="contact">
+      <div class="section-head">
+        <span class="badge">Mon Expérience</span>
+        <p class="description">
+          Mon parcours professionnel dans le développement web, des stages
+          formatifs au freelancing.
+        </p>
       </div>
       <div>
         <div>
@@ -292,7 +628,7 @@
         </div>
         <div>
           <div>
-            <svg
+            <!-- <svg
               width="32px"
               height="32px"
               viewBox="0 0 24 24"
@@ -305,10 +641,26 @@
                 d="M14.982 19.61c.454-.7.909-1.6 1.236-2.755.755.29 1.273.636 1.591.909a8.182 8.182 0 0 1-2.864 1.845h.037v.001zm-8.8-1.855c.336-.273.845-.61 1.6-.91.336 1.164.773 2.064 1.236 2.764A8.2 8.2 0 0 1 6.2 17.755h-.018zm10.636-6.664c-.028-.81-.11-1.619-.245-2.418 1-.364 1.727-.8 2.236-1.2a8.136 8.136 0 0 1 1.282 3.618h-3.273zm-8.973-4.2a5.936 5.936 0 0 1-1.481-.8 8.2 8.2 0 0 1 2.654-1.7c-.427.636-.845 1.454-1.182 2.5h.01-.001zm7.137-2.5a8.145 8.145 0 0 1 2.654 1.7 6.01 6.01 0 0 1-1.481.8 9.58 9.58 0 0 0-1.182-2.5h.009zM14.8 9.118c.09.6.182 1.246.2 1.973H9c.027-.727.09-1.382.182-1.973 1.855.334 3.754.334 5.609 0h.009zM12 7.545c-.91 0-1.71-.072-2.39-.181.726-2.237 1.854-3.137 2.39-3.455.518.318 1.655 1.227 2.382 3.455A15.04 15.04 0 0 1 12 7.545zm-6.818-.072a8.03 8.03 0 0 0 2.245 1.2 18.368 18.368 0 0 0-.245 2.418h-3.31a8.13 8.13 0 0 1 1.319-3.618h-.01.001zm-1.3 5.436h3.3c.036.782.09 1.5.2 2.155a7.682 7.682 0 0 0-2.31 1.272 8.11 8.11 0 0 1-1.2-3.427h.01zM12 14.364c-1.09 0-2.027.09-2.845.236A16.91 16.91 0 0 1 9 12.91h6c-.027.608-.073 1.18-.145 1.69A15.388 15.388 0 0 0 12 14.355v.009zm0 5.727c-.545-.327-1.745-1.3-2.473-3.727A14.095 14.095 0 0 1 12 16.182c.955 0 1.773.063 2.482.182-.727 2.454-1.927 3.4-2.473 3.727H12zm6.927-3.764a7.634 7.634 0 0 0-2.309-1.272 17.95 17.95 0 0 0 .2-2.146h3.31a8.11 8.11 0 0 1-1.2 3.418h-.001zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"
                 fill="#fff"
               />
+            </svg> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="#fff"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <!-- Goutte de localisation -->
+              <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/>
+              <!-- Point central de l'adresse -->
+              <circle cx="12" cy="10" r="3" />
             </svg>
           </div>
-          <div>Site Web</div>
-          <div>https://ludores-bejery.vercel.app/</div>
+          <div>Adresse</div>
+          <div>Tananarivo, Madagascar</div>
         </div>
       </div>
     </section>
@@ -324,101 +676,88 @@
           placeholder="Message en question"
         ></textarea>
         <input type="submit" value="Envoyer" />
-         <!-- onclick="enregistrer()" /> -->
+        <!-- onclick="enregistrer()" /> -->
       </form>
     </section>
 
-    <section class="section-11">
-      <div>Restons connecter, suivez moi dans mes reseaux sosiaux</div>
-      <div>
-        <a href="https://www.facebook.com/bejery.ludores.2025">
-          <svg
-            fill="#fff"
-            width="30px"
-            height="30px"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"
-            />
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/bejeryludores/">
-          <svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-              fill="#fff"
-            />
-            <path
-              d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-              fill="#fff"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-              fill="#fff"
-            />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/ludores/">
-          <svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"
-              fill="#fff"
-            />
-            <path
-              d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z"
-              fill="#fff"
-            />
-            <path
-              d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z"
-              fill="#fff"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
-              fill="#fff"
-            />
-          </svg>
-        </a>
-        <div></div>
-      </div>
-    </section>
-    <!-- <footer>
-      <div>
-        <div>
-          <div>HeadLine</div>
-          <div>Text Value</div>
+    <footer>
+      <div class="footer__inner">
+        <div class="footer__main">
+          <!-- Navigation -->
+          <nav class="footer__nav">
+            <a href="#accueil">Accueil</a>
+            <span class="sep"></span>
+            <a href="#service">Service</a>
+            <span class="sep"></span>
+            <a href="#portfolio">Portfolio</a>
+            <span class="sep"></span>
+            <a href="#contact">Contact</a>
+          </nav>
+          <!-- Socials -->
+          <div class="footer__socials">
+            <!-- GitHub -->
+            <a
+              href="https://github.com/Ludores"
+              class="social-link"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+                />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/ludores"
+              class="social-link"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/bejery.ludores.2025"
+              class="social-link"
+              aria-label="Facebook"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"
+                />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/bejeryludores/"
+              class="social-link"
+              aria-label="Instagram"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div>
-          <div>HeadLine</div>
-          <div>Text Value</div>
-        </div>
-        <div>
-          <div>HeadLine</div>
-          <div>Text Value</div>
+
+        <!-- Bottom bar -->
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            &copy; <strong>2026</strong> — Tous droits réservés.
+          </p>
+          <p class="footer__status">Disponible pour de nouveaux projets</p>
         </div>
       </div>
-      <div>Text Foot</div>
-    </footer> -->
-    <footer></footer>
+    </footer>
     <script src="./script.js" defer></script>
   </body>
 </html>
